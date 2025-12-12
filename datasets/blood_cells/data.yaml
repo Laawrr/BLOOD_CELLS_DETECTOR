@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 3
+names: ['Platelets', 'RBC', 'WBC']
+
+roboflow:
+  workspace: csc126project-9rxlq
+  project: blood-cell-detection-1ekwu-uei2c
+  version: 2
+  license: Public Domain
+  url: https://universe.roboflow.com/csc126project-9rxlq/blood-cell-detection-1ekwu-uei2c/dataset/2
