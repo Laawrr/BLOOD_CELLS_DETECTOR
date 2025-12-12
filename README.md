@@ -20,40 +20,25 @@ blood_cell/
 ├─ datasets/
 │   ├─ blood_cells/            # Training dataset with images and labels
 │   │   └─ data.yaml           # YOLOv8 dataset config
-│   └─ student_test/           # Folder for testing images/videos
-│       ├─ images/
-│       └─ videos/
+│   └─ test/                   # Folder for testing image/videos
+│       └─ images/
 │
 ├─ runs/                       # YOLOv8 output (trained weights, results)
 │
-├─ train.py                    # Training script
-├─ test_images.py               # Testing script for images
-├─ requirements.txt            # Python dependencies
-└─ README.md                   # Project documentation
+├─ BLOOD_CELLS.ipynb           # Training script
+├─ TEST_MODEL.py               # Testing script for images
+└─ requirements.txt            # Python dependencies
 ```
 
 ---
 
-## **Setup (Using pip / venv)**
+## **Clone Repository**
 
 1. Clone the repository:
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/Laawrr/BLOOD_CELLS_DETECTOR.git
 cd blood_cell
 ```
-
-2. Create a virtual environment:
-```bash
-python -m venv venv
-source venv/bin/activate   # Linux/Mac
-venv\Scripts\activate      # Windows
-```
-
-3. Install dependencies:
-```bash
-pip install -r requirements.txt
-```
-
 ---
 
 ## **Setup (Using Conda)**
@@ -68,21 +53,12 @@ conda activate bloodcell
 
 3. Install dependencies:
 
-#### GPU (CUDA 12.4)
 ```bash
-conda install pytorch==2.6.0 torchvision torchaudio pytorch-cuda=12.4 -c pytorch -c nvidia
-pip install ultralytics==8.2.103 PyYAML==6.0.3 ipython==8.12.3
-```
-
-#### CPU only
-```bash
-conda install pytorch==2.6.0 torchvision torchaudio cpuonly -c pytorch
-pip install ultralytics==8.2.103 PyYAML==6.0.3 ipython==8.12.3
+pip install -r requirements.txt
 ```
 
 4. Verify installation:
 ```bash
-python -c "import torch; print(torch.__version__, torch.cuda.is_available())"
 python -c "from ultralytics import YOLO; print('Ultralytics YOLO loaded successfully')"
 ```
 
@@ -90,14 +66,11 @@ python -c "from ultralytics import YOLO; print('Ultralytics YOLO loaded successf
 
 ## **Training**
 
-1. Configure training parameters in `train.py` if needed (EPOCHS, BATCH_SIZE, IMG_SIZE, etc.)
-2. Ensure `datasets/blood_cells/data.yaml` is correct.
-3. Run training:
-```bash
-python train.py
-```
+1. Open BLOOD_CELLS.ipynb  in Jupyter Notebook or JupyterLab.
+2. Configure training parameters in the notebook if needed (EPOCHS, BATCH_SIZE, IMG_SIZE, etc.).
+3. Run the notebook cells to start training.
 
-- Best weights are saved at:  
+- Best weights are saved at:
 ```
 runs/blood_cell_project/yolov8_blood_cells_v1/weights/best.pt
 ```
@@ -108,12 +81,12 @@ runs/blood_cell_project/yolov8_blood_cells_v1/weights/best.pt
 
 1. Place test images in:
 ```
-datasets/student_test/images/
+datasets/test/images/
 ```
 
 2. Run the testing script:
 ```bash
-python test_images.py
+python TEST_MODEL.py
 ```
 
 - Annotated images will be saved to:  
