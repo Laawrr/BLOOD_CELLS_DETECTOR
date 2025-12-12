@@ -91,7 +91,7 @@ python TEST_MODEL.py
 
 - Annotated images will be saved to:  
 ```
-blood_cell_project/test_results/
+runs/detect/
 ```
 - Detection info (class, confidence, bounding box) will be printed.
 
