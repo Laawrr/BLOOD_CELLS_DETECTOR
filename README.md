@@ -23,7 +23,7 @@ blood_cell/
 │   └─ test/                   # Folder for testing image/videos
 │       └─ images/
 │
-├─ runs/                       # YOLOv8 output (trained weights, results)
+├─ blood_cell_project/                       # YOLOv8 output (trained weights, results)
 │
 ├─ BLOOD_CELLS.ipynb           # Training script
 ├─ TEST_MODEL.py               # Testing script for images
@@ -72,7 +72,7 @@ python -c "from ultralytics import YOLO; print('Ultralytics YOLO loaded successf
 
 - Best weights are saved at:
 ```
-runs/blood_cell_project/yolov8_blood_cells_v1/weights/best.pt
+blood_cell_project/yolov8_blood_cells_v1/weights/best.pt
 ```
 
 ---
@@ -91,7 +91,7 @@ python TEST_MODEL.py
 
 - Annotated images will be saved to:  
 ```
-runs/blood_cell_project/test_results/
+blood_cell_project/test_results/
 ```
 - Detection info (class, confidence, bounding box) will be printed.
 
