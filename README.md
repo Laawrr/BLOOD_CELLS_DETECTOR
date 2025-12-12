@@ -8,7 +8,7 @@ This project trains and tests a **YOLOv8 model** to detect blood cells in images
 - Train YOLOv8 on custom blood cell dataset  
 - Test trained model on new images or videos  
 - Visualize predictions with confidence scores, bounding boxes, and annotations  
-- Export trained model to multiple formats (ONNX, TorchScript, TensorRT)
+- Export trained model to multiple formats (ONNX, TorchScript)
 
 ---
 
@@ -105,8 +105,6 @@ Export trained model to essential formats:
 ```python
 model.export(format="onnx")        # Cross-platform inference
 model.export(format="torchscript") # PyTorch C++ or mobile
-model.export(format="coreml")      # iOS/macOS
-model.export(format="tensorrt")    # NVIDIA GPU optimization
 ```
 
 ---
