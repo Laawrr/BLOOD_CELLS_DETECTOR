@@ -2,3 +2,6 @@ ipython==8.12.3
 PyYAML==6.0.3
 torch==2.6.0+cu124
 ultralytics==8.2.103
+onnx==1.19.1
+onnxslim==0.1.34
+numpy>=1.22
