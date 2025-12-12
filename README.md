@@ -37,7 +37,7 @@ blood_cell/
 1. Clone the repository:
 ```bash
 git clone https://github.com/Laawrr/BLOOD_CELLS_DETECTOR.git
-cd blood_cell
+cd BLOOD_CELLS_DETECTOR
 ```
 ---
 
